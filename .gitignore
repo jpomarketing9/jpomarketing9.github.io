@@ -1,0 +1,5 @@
+# Never committed - this repo is public, so anything committed is readable on github.com
+public-encrypted/
+
+.env
+.env.*
