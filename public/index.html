@@ -3,9 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JPO Marketing</title>
+  <meta name="robots" content="noindex, nofollow">
+  <title>Kundeportal · JPO Marketing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/portal.css">
 </head>
 <body>
-  <h1>JPO Marketing</h1>
+  <header class="page-header">
+    <div class="inner">
+      <a href="https://jpomarketing.dk"><img class="jpo-logo" src="/assets/jpo-marketing-logo-light.png" alt="JPO Marketing" width="124" height="40"></a>
+      <span class="header-label">Kundeportal</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">Kundeportal</p>
+        <h1>Dine rapporter og filer, samlet ét sted</h1>
+        <p class="lead">Her finder du de rapporter, analyser og filer, vi har lavet til dig. Indtast din kundekode for at komme til din egen side.</p>
+
+        <form class="code-card" id="code-form" autocomplete="off">
+          <label for="code">Kundekode</label>
+          <div class="code-row">
+            <input type="text" id="code" name="code" placeholder="fx hansen-tandklinik" required spellcheck="false" autocapitalize="none">
+            <button type="submit" class="btn-primary">Gå til min side</button>
+          </div>
+          <p class="hint">Din kode står i den mail, du har fået fra JPO Marketing.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section-light">
+      <div class="container">
+        <h2>Sådan virker det</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <h3>Du får en kode</h3>
+            <p>Vi sender dig en personlig kundekode, når din første rapport er klar.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <h3>Indtast koden</h3>
+            <p>Skriv koden i feltet ovenfor, så kommer du direkte til din side.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <h3>Se dine resultater</h3>
+            <p>Her ligger dine rapporter og filer. Nye rapporter bliver lagt op løbende.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="container">
+        <p>Har du mistet din kode eller spørgsmål til en rapport? Kontakt os via <a href="mailto:jan@jpomarketing.dk">jan@jpomarketing.dk</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    JPO Marketing ApS · Havnegade 39, 1058 København K · <a href="https://jpomarketing.dk">jpomarketing.dk</a> · CVR: 36400757
+  </footer>
+
+  <script>
+    document.getElementById('code-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var code = document.getElementById('code').value.trim().toLowerCase()
+        .replace(/æ/g, 'ae').replace(/ø/g, 'oe').replace(/å/g, 'aa')
+        .replace(/\s+/g, '-')
+        .replace(/[^a-z0-9-]/g, '');
+      if (code) window.location.href = '/' + code + '/';
+    });
+  </script>
 </body>
 </html>

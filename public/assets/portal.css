@@ -1,0 +1,206 @@
+:root {
+  --jpo-orange:    #fd9621;
+  --jpo-dark:      #1a1a1a;
+  --jpo-grey:      #555555;
+  --jpo-light-bg:  #f5f5f5;
+  --jpo-border:    #e0e0e0;
+  --jpo-white:     #ffffff;
+
+  --font-heading:  'Lato', Arial, sans-serif;
+  --font-body:     'Roboto Slab', Georgia, serif;
+
+  --radius:        6px;
+  --shadow-sm:     0 1px 4px rgba(0,0,0,0.08);
+  --shadow-md:     0 4px 16px rgba(0,0,0,0.12);
+}
+
+* { box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--jpo-dark);
+  background: var(--jpo-white);
+  line-height: 1.65;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--jpo-dark);
+  font-weight: 700;
+  margin-top: 0;
+}
+
+a { color: var(--jpo-orange); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Header */
+.page-header {
+  background: var(--jpo-dark);
+  padding: 1.25rem 1.5rem;
+}
+.page-header .inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.jpo-logo { height: 40px; width: auto; display: block; }
+.header-label {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #cccccc;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+main { flex: 1; }
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Hero */
+.hero {
+  padding: 4.5rem 0 3.5rem;
+}
+.eyebrow {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--jpo-orange);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin: 0 0 0.75rem;
+}
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 900;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+.lead {
+  font-size: 1.1rem;
+  color: var(--jpo-grey);
+  max-width: 34rem;
+  margin: 0 0 2.5rem;
+}
+
+/* Kode-formular */
+.code-card {
+  background: var(--jpo-white);
+  border: 1px solid var(--jpo-border);
+  border-top: 4px solid var(--jpo-orange);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  padding: 1.75rem;
+  max-width: 34rem;
+}
+.code-card label {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.code-row {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.code-row input {
+  flex: 1 1 14rem;
+  min-width: 0;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  padding: 0.75em 0.9em;
+  border: 1px solid var(--jpo-border);
+  border-radius: var(--radius);
+  color: var(--jpo-dark);
+}
+.code-row input:focus {
+  outline: none;
+  border-color: var(--jpo-orange);
+  box-shadow: 0 0 0 3px rgba(253,150,33,0.2);
+}
+.btn-primary {
+  background: var(--jpo-orange);
+  color: var(--jpo-white);
+  padding: 0.75em 1.6em;
+  border-radius: var(--radius);
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+.btn-primary:hover { background: #e8850f; text-decoration: none; }
+.hint {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  color: var(--jpo-grey);
+  margin: 0.75rem 0 0;
+}
+
+/* Sådan virker det */
+.section-light {
+  background: var(--jpo-light-bg);
+  padding: 3.5rem 0;
+}
+.section-light h2 {
+  font-size: 1.4rem;
+  border-bottom: 3px solid var(--jpo-orange);
+  padding-bottom: 0.3em;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 1.25rem;
+}
+.step {
+  background: var(--jpo-white);
+  border: 1px solid var(--jpo-border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+.step-num {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--jpo-orange);
+  line-height: 1;
+  margin-bottom: 0.6rem;
+}
+.step h3 { font-size: 1.05rem; margin-bottom: 0.4rem; }
+.step p { margin: 0; color: var(--jpo-grey); font-size: 0.95rem; }
+
+/* Kontakt */
+.contact { padding: 3rem 0; }
+.contact p { margin: 0; color: var(--jpo-grey); }
+
+/* Footer */
+.page-footer {
+  border-top: 1px solid var(--jpo-border);
+  padding: 1rem 1.5rem;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  color: var(--jpo-grey);
+  text-align: center;
+}
+
+@media (max-width: 560px) {
+  .header-label { display: none; }
+  .hero { padding: 3rem 0 2.5rem; }
+  .btn-primary { width: 100%; }
+}
