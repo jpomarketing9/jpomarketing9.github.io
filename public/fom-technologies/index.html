@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Rapporter · FOM Technologies · JPO Marketing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/portal.css">
+  <style>
+    .report-list { list-style: none; padding: 0; margin: 2rem 0 0; display: grid; gap: 0.75rem; }
+    .report-list a { display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      padding: 1.1rem 1.25rem; border: 1px solid var(--jpo-border); border-radius: var(--radius);
+      background: var(--jpo-white); color: var(--jpo-dark); box-shadow: var(--shadow-sm); }
+    .report-list a:hover { text-decoration: none; border-color: var(--jpo-orange); box-shadow: var(--shadow-md); }
+    .report-title { font-family: var(--font-heading); font-weight: 700; font-size: 1.05rem; }
+    .report-meta { font-size: 0.85rem; color: var(--jpo-grey); }
+    .report-arrow { color: var(--jpo-orange); font-family: var(--font-heading); font-weight: 700; white-space: nowrap; }
+  </style>
+</head>
+<body>
+  <header class="page-header">
+    <div class="inner">
+      <a href="https://jpomarketing.dk"><img class="jpo-logo" src="/assets/jpo-marketing-logo-light.png" alt="JPO Marketing" width="124" height="40"></a>
+      <span class="header-label">Kundeportal</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">FOM Technologies</p>
+        <h1>Dine rapporter</h1>
+        <p class="lead">Vælg en rapport. Rapporterne er beskyttet med den adgangskode, du har fået fra JPO Marketing.</p>
+
+        <!-- Nyeste rapport øverst. Tilføj en ny <li> pr. måned. -->
+        <ul class="report-list">
+          <li><a href="2026-10/">
+            <span><span class="report-title">Månedsrapport · Oktober 2026</span><br>
+            <span class="report-meta">Leads, website (GA4) og organisk søgning</span></span>
+            <span class="report-arrow">Åbn &rarr;</span>
+          </a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="container">
+        <p>Spørgsmål til en rapport? Kontakt os via <a href="mailto:jan@jpomarketing.dk">jan@jpomarketing.dk</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    JPO Marketing ApS · Havnegade 39, 1058 København K · <a href="https://jpomarketing.dk">jpomarketing.dk</a> · CVR: 36400757
+  </footer>
+</body>
+</html>
